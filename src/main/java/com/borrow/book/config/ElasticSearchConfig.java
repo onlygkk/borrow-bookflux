@@ -1,4 +1,4 @@
-package com.borrow.book.controller.config;
+package com.borrow.book.config;
 
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;

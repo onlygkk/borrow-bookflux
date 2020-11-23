@@ -1,4 +1,4 @@
-package com.borrow.book.controller;
+package com.borrow.book;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

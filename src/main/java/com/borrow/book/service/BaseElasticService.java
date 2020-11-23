@@ -1,4 +1,4 @@
-package com.borrow.book.controller.service;
+package com.borrow.book.service;
 
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
