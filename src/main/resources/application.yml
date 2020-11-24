@@ -3,5 +3,5 @@ server:
 spring:
   elasticsearch:
     rest:
-      uris: 127.0.0.1
+      uris: 127.0.0.1:9200
 

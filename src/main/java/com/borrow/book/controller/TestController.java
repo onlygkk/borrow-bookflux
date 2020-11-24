@@ -14,7 +14,7 @@ public class TestController {
         ResultBody resultBody=new ResultBody();
         resultBody.setCode("200");
         resultBody.setMessage("返回成功");
-        return Flux.just(resultBody);
+        return null;
     }
 
 
