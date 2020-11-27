@@ -11,8 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -59,8 +58,36 @@ public class EsApiApplicationTest {
     @Test
     public void LamdbaTest()
     {
-        List<Double> cost = Arrays.asList(10.0, 20.0,30.0);
-        Double aDouble = cost.stream().map(x -> x + x * 1).reduce((sum, x) -> sum + x).get();
+       List<Double> cost = Arrays.asList(10.0, 20.0,30.0);
+       Double aDouble = cost.stream().map(x -> x + x * 1).reduce((sum, x) -> sum + x).get();
         System.out.println(aDouble);
+
+      cost.stream().filter(x->x>15).collect(Collectors.toList()).forEach(x ->System.out.println(x));
+
+        Map<String, Integer> items = new HashMap<>();
+        items.put("A", 10);
+        items.put("B", 20);
+        items.put("C", 30);
+        items.put("D", 40);
+        items.put("E", 50);
+        items.put("F", 60);
+
+        items.forEach((k,v) ->{
+            System.out.println("item:"+k+",itmev:"+v);
+            if(k.equals("B")){
+                System.out.println("find b:"+v);
+            }
+        });
+
+        List<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+        list.add("E");
+        //输出：A,B,C,D,E
+        list.forEach(item->System.out.println(item));
+
+
     }
 }
