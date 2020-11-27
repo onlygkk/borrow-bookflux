@@ -4,9 +4,9 @@
 
     <resultMap id="UserResultMap" type="com.borrow.book.entity.User">
         <result column="id" jdbcType="INTEGER" property="id" />
-        <result column="userName" jdbcType="VARCHAR" property="userName" />
-        <result column="passWord" jdbcType="VARCHAR" property="passWord" />
-        <result column="realName" jdbcType="VARCHAR" property="realName" />
+        <result column="userName" jdbcType="VARCHAR" property="user_name" />
+        <result column="passWord" jdbcType="VARCHAR" property="pass_word" />
+        <result column="realName" jdbcType="VARCHAR" property="real_name" />
     </resultMap>
 
     <select id="QueryUserList" resultMap="UserResultMap">
