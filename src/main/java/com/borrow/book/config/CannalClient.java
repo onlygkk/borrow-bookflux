@@ -1,3 +1,4 @@
+/*
 package com.borrow.book.config;
 
 import com.alibaba.otter.canal.client.CanalConnector;
@@ -23,7 +24,7 @@ public class CannalClient implements InitializingBean {
             //打开连接
             connector.connect();
             //订阅数据库表,全部表
-            //connector.subscribe("ptms\\..*");
+            connector.subscribe(".*\\..*");
             //回滚到未进行ack的地方，下次fetch的时候，可以从最后一个没有ack的地方开始拿
             connector.rollback();
             while (true) {
@@ -55,9 +56,11 @@ public class CannalClient implements InitializingBean {
         }
     }
 
-    /**
+    */
+/**
      * 打印canal server解析binlog获得的实体类信息
-     */
+     *//*
+
     private static void printEntry(List<CanalEntry.Entry> entrys) {
         for (CanalEntry.Entry entry : entrys) {
             if (entry.getEntryType() == CanalEntry.EntryType.TRANSACTIONBEGIN || entry.getEntryType() == CanalEntry.EntryType.TRANSACTIONEND) {
@@ -110,3 +113,4 @@ public class CannalClient implements InitializingBean {
         }
     }
 }
+*/

@@ -7,12 +7,19 @@ spring:
 
   datasource:
     username: root
-    password: root
+    password: 123456
     url: jdbc:mysql://localhost:3306/borrow?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# 消费者的组名
+
+# NameServer地址
+
+
 
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
   config-location: classpath:mybatis/mybatis.xml
+
 
 
