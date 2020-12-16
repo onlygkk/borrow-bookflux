@@ -5,21 +5,20 @@ import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-@Component
+//@Component
 public class UserProducer {
 
-    /**
+   /* *//**
      * 生产者的组名
-     */
+     *//*
     private String producerGroup="user-group";
-    /**
+    *//**
      * NameServer 地址
-     */
+     *//*
     private String namesrvAddr="127.0.0.1:9876";
 
     @PostConstruct
@@ -42,5 +41,5 @@ public class UserProducer {
             producer.shutdown();
         }
     }
-
+*/
 }

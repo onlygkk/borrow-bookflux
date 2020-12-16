@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.apache.commons.codec.binary.Base64;
+import reactor.core.publisher.Flux;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -164,4 +165,11 @@ public class EsApiApplicationTest {
         consumer.start();
     }
 
+    @Test
+    public void createAFlux_just() {
+        Flux<String> filutFlux = Flux.just("Apple", "Orange", "Grape", "Banana");
+        filutFlux.subscribe(f ->
+                System.out.println("hello :" + f)
+        );
+    }
 }
